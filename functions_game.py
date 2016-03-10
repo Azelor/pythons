@@ -64,6 +64,11 @@ def majaesine():
               print("Keegi ei tea täpselt kuidas, aga sul õnnestus lahingus koera võita. Nüüd oled sina aia peremees. \nVäravale kinnitatakse uus silt: Ettevaatust, kuri apelsin!")
         else:
               print("Koer näris su puruks. Milline tänamatus!")
+    else:
+        # Kui vale sisend...
+        print("Vale sisend. Jääd tardunult paigale. Koer rebib su lõhki. Milline tänamatus!")
+        print("Järgmine kord vali a või b.")
+
 
 def rentsel():
     print("Kanalistatsioonitorustik on kole koht. Isegi apelsinide arvates.")
