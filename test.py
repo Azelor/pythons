@@ -1,19 +1,20 @@
+import turtle
 
+def koch(t, order, size):
+    """
+       Make turtle t draw a Koch fractal of 'order' and 'size'.
+       Leave the turtle facing the same direction.
+    """
 
-aadressid = ["Mustika 15-6, 23456, Mustvee",
- "Oja 12-34, 23456, Mustvee",
- "Jaama 34-56, 12345, Keila",
- "Tartu mnt. 67-89, 12456, Tallinn"]
+    if order == 0:          # The base case is just a straight line
+        t.forward(size)
+    else:
+        koch(t, order-1, size/3)   # Go 1/3 of the way
+        t.left(60)
+        koch(t, order-1, size/3)
+        t.right(120)
+        koch(t, order-1, size/3)
+        t.left(60)
+        koch(t, order-1, size/3)
 
-aadr = aadressid[0].split(",")
-
-print(aadr)
-
-# teha for loop, mis käib läbi otsingusõna ja prindib kõik sobivad.
-# probleem selles, et kui tänavanimi kattub linnanimega siis annab vale tulemi
-
-a = "Mustika 15-6, 23456, Mustvee"
-
-nugis = a.split(",")[-1].strip()
-
-print(nugis)
+koch(2,3,4)
