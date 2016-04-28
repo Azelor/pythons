@@ -1,20 +1,12 @@
-import turtle
+import cProfile
 
-def koch(t, order, size):
-    """
-       Make turtle t draw a Koch fractal of 'order' and 'size'.
-       Leave the turtle facing the same direction.
-    """
+# See programm arvutab loendi elementide korrutise
 
-    if order == 0:          # The base case is just a straight line
-        t.forward(size)
-    else:
-        koch(t, order-1, size/3)   # Go 1/3 of the way
-        t.left(60)
-        koch(t, order-1, size/3)
-        t.right(120)
-        koch(t, order-1, size/3)
-        t.left(60)
-        koch(t, order-1, size/3)
+loend = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ,20]
+tulem = 1 # algväärtustamine
+for element in loend:
+    tulem = tulem * element #või muu operatsioon
+print("Loendi elementide korrutis", tulem)
 
-koch(2,3,4)
+
+cProfile.run('print("Loendi elementide korrutis", tulem)')

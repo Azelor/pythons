@@ -1,3 +1,5 @@
+import cProfile
+
 def alamhulgad(jada):
     """
     Tagastab jada alamhulkade (loendite) loendi.
@@ -31,3 +33,5 @@ print("Kõik alamhulgad:", alamhulgad(testjada))
 print("[-6] sobib:", on_vaike_alamhulk(testjada, 1, -4))
 print("Pole sellist:", on_vaike_alamhulk(testjada, 2, -4))
 print("[3, -6, 7] sobib:", on_vaike_alamhulk(testjada, 3, 5))
+
+cProfile.run('anagramm3("suur peet", "pete urus")')
