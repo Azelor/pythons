@@ -1,12 +1,13 @@
-import cProfile
+riik = "Eesti: blue,black,white"
+riigid = riik.split()
 
-# See programm arvutab loendi elementide korrutise
+print(riigid[0])
 
-loend = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ,20]
-tulem = 1 # algväärtustamine
-for element in loend:
-    tulem = tulem * element #või muu operatsioon
-print("Loendi elementide korrutis", tulem)
+splitLine = riik.split(":")
+varvid = splitLine[1].strip().split(",")
+print(splitLine[0])
+print(varvid)
 
-
-cProfile.run('print("Loendi elementide korrutis", tulem)')
+dictionary = {}
+dictionary[splitLine].append(varvid)
+dictionary
